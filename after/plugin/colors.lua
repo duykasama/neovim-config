@@ -1,11 +1,13 @@
 function ColorMyPencils(color)
 
-	color = color or "rose-pine"
+	if color == nil or color  == "" then
+		color = "nightfox"
+	end
 	vim.cmd.colorscheme(color)
-
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 end
 
-ColorMyPencils()
+local current_color = os.getenv("COLOR_SCHEME")
+ColorMyPencils(current_color)

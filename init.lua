@@ -1,1 +1,1 @@
-require("duy")
+require("duykasama")

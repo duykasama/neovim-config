@@ -17,7 +17,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'rust_analyzer', 'angularls', 'ansiblels', 'csharp_ls', 'dartls', 'docker_compose_language_service', 'dockerls', 'eslint', 'groovyls', 'html', 'java_language_server', 'kotlin_language_server', 'lua_ls', 'nginx_language_server', 'sqlls', 'tailwindcss', 'terraform_lsp', 'terraformls', 'yamlls'},
+  ensure_installed = {'tsserver', 'rust_analyzer', 'angularls', 'ansiblels', 'csharp_ls', 'docker_compose_language_service', 'dockerls', 'eslint', 'html', 'java_language_server', 'kotlin_language_server', 'lua_ls',  'sqlls', 'tailwindcss', 'terraformls', 'yamlls'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
@@ -46,3 +46,4 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
 })
+
